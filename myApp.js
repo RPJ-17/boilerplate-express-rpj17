@@ -10,9 +10,9 @@ app.get('/', (req, res) => {
 
 app.get('/json', (req, res) => {
     if (process.env.MESSAGE_STYLE === "uppercase") {
-        res.send({"message": "HELLO JSON"});
+        res.send({"message": "HELLO JSON", "message style": process.env.MESSAGE_STYLE});
     } else {
-        res.send({"message": "Hello json"});
+        res.send({"message": "Hello json", "message style": process.env.MESSAGE_STYLE});
     }
 });
 
