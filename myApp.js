@@ -8,8 +8,6 @@ app.get('/', (req, res) => {
     res.sendFile(`${__dirname}/views/index.html`);
 });
 
-console.log(process.env.MESSAGE_STYLE)
-
 app.get('/json', (req, res) => {
     if (process.env.MESSAGE_STYLE === "uppercase") {
         res.send({"message": "HELLO JSON"});
